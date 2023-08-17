@@ -1,0 +1,182 @@
+section
+{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    display: grid;
+    place-items: center;
+}
+
+section .datos
+{
+    width: 90%;
+    height: 270px;
+    display: grid;
+    place-items: center;
+
+}
+
+.datos .texto
+{
+    text-align: center;
+}
+
+.texto img
+{
+    width: 100px;
+    height: 100px;
+}
+
+.texto a
+{
+    color: #242424;
+    font-size: 40px;
+    transition: all .3s ease;
+}
+
+.texto a:hover
+{
+    color: #25D366;
+}
+
+section .formulario
+{
+    width: 90%;
+    padding: 50px;
+    background-color: #055256;
+}
+
+.formulario h2
+{
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.formulario form
+{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+}
+
+form .inp,
+form textarea
+{
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #d4d4d4;
+}
+
+form .permiso
+{
+    width: 90%;
+    display: flex;
+}
+
+.permiso p
+{
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+form #enviar
+{
+    font-size: 16px;
+    font-weight: 500;
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #242424;
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+form #enviar:hover
+{
+    color: #242424;
+    background-color: #b8b8b8;
+}
+
+
+
+
+
+@media (max-width: 704px)
+{
+    .formulario
+    {
+        margin-top: 35px;
+    }
+
+    .formulario form
+    {
+        padding: 0px;
+    }
+
+    form .inp,
+    form textarea
+    {
+        width: 100%;
+    }
+
+    form .permiso
+    {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px)
+{
+    form
+    {
+        padding: 0;
+    }
+
+    section .formulario
+    {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .formulario h2
+    {
+        font-size: 20px;
+    }
+
+    .permiso p
+    {
+        font-size: 10px;
+    }
+
+    .texto img
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+    .texto p
+    {
+        font-size: 12px;
+    }
+
+    .texto a
+    {
+        font-size: 25px;
+    }
+
+}
+

@@ -1,0 +1,215 @@
+/********************************************* SECTION *******************************************/
+section
+{
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(120deg, hsla(0, 0%, 0%, 0.568) 0%, hsla(0, 0%, 31%, 0.521) 100%), url("../img/bookstore.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section .historia
+{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    opacity: 10;
+    background-color: #ffffff86;
+}
+
+.historia h2
+{
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.historia p
+{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.historia .gracias
+{
+    font-weight: 600;
+    text-align: center;
+}
+
+/********************************************* POLITICAS *******************************************/
+.politicas
+{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    display: grid;
+    place-items: center;
+}
+
+.politicas h2
+{
+    margin-bottom: 30px;
+}
+
+.politicas .container_politicas
+{
+    width: 95%;
+    height: 100%;
+    gap: 1rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+}
+
+.container_politicas .card_politicas
+{
+    width: 350px;
+    height: 230px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    background-color: #9b9a9a;
+}
+
+.card_politicas .pol_img
+{
+    width: 80px;
+    height: 80px;
+}
+
+.pol_img img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.card_politicas .info
+{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: grid;
+    place-items: center;
+}
+
+.info p
+{
+    width: 95%;
+    font-size: 14px;
+    text-align: justify;
+}
+
+/*****************************************************************************************************************/
+@media (max-width: 1334px)
+{
+    section .historia
+    {
+        width: 80%;
+    }
+}
+
+@media (max-width: 834px)
+{
+    section .historia
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 667px)
+{
+    .historia p
+    {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 504px)
+{
+    .historia h2
+    {
+        font-weight: 400;
+    }
+
+    .historia p
+    {
+        font-size: 14px;
+    }
+
+    .historia .gracias
+    {
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 419px)
+{
+    section
+    {
+        height: 550px;
+    }
+}
+
+@media (max-width: 395px)
+{
+    section
+    {
+        height: 600px;
+    }
+
+    .politicas .container_politicas
+    {
+        width: 100%;
+    }
+
+    .container_politicas .card_politicas
+    {
+        width: 300px;
+        height: 260px;
+    }
+
+}
+
+@media (max-width: 353px)
+{
+    .historia
+    {
+        padding: 5px;
+    }
+
+    .historia .demas
+    {
+        display: none;
+    }
+
+    section
+    {
+        height: 500px;
+    }
+
+    .container_politicas .card_politicas
+    {
+        width: 250px;
+        height: 290px;
+    }
+}
+
+@media (max-width: 350px)
+{
+    section
+    {
+        display: none;
+    }
+
+    .politicas
+    {
+        margin-top: 100px;
+    }
+}

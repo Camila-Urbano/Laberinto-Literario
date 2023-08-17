@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/4380b6d3aa.js" crossorigin="anonymous"></script>
+    <title>Laberinto Literario</title>
+    <link rel="stylesheet" href="./CSS/generales.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>Laberinto Literario</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="select">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-bars" id="icon_menu"></i>
+    </header>
+    
+
+
+    <main>
+
+        <div class="contenido">
+            <h1>Laberinto Literario</h1>
+            <p>Donde cada historia es un camino de maravillas</p>
+        </div>
+
+
+        <div class="inicio_img">
+        </div>
+        
+    </main>
+
+    <div class="servicios">
+
+        <h2>servicios</h2>
+
+        <div class="container_servicios">
+            <div class="card_servicio">
+                <div class="servicio_img">
+                    <img src="./IMG/iconos/repartidor.png" alt="">
+                </div>
+                <div class="card_titulo">
+                    <h5>Servicio de envío a domicilio</h5>
+                </div>
+            </div>
+
+            <div class="card_servicio">
+                <div class="servicio_img">
+                    <img src="./IMG/iconos/leyendo.png" alt="">
+                </div>
+                <div class="card_titulo">
+                    <h5>Espacio para lectura</h5>
+                </div>
+            </div>
+
+            <div class="card_servicio">
+                <div class="servicio_img">
+                    <img src="./IMG/iconos/calendario.png" alt="">
+                </div>
+                <div class="card_titulo">
+                    <h5>Eventos literarios</h5>
+                </div>
+            </div>
+
+            <div class="card_servicio">
+                <div class="servicio_img">
+                    <img src="./IMG/iconos/leer.png" alt="">
+                </div>
+                <div class="card_titulo">
+                    <h5>Club de lectura</h5>
+                </div>
+            </div>
+            
+            <div class="card_servicio">
+                <div class="servicio_img">
+                    <img src="./IMG/iconos/zakat.png" alt="">
+                </div>
+                <div class="card_titulo">
+                    <h5>Compra y venta de libros usados</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="catalogo">
+
+        <h2>Libros</h2>
+
+        <div class="container_libros">
+
+            <div class="card" nombre-libro="el ancho mundo" autor="Pierre Lemaitre" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/1.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$56.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="el cuco de cristal" autor="Javier Castillo" categoria="novela negra">
+                <div class="card_img">
+                    <img src="./img/catalogo/2.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$97.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="las formas del querer" autor="Ines Rodrigo" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/3.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$45.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="lejos de luisiana" autor="Luz Gabss" categoria="novela historica">
+                <div class="card_img">
+                    <img src="./img/catalogo/4.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$58.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="cuando no quedan mas estrellas que contar" autor="Maria Martinez" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/5.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$36.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="esta herida llena de peces" autor="Lorena Salazar Masso" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/6.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$73.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="bajo un cielo blanco" autor="Elizabeth Kolbert" categoria="ensayo">
+                <div class="card_img">
+                    <img src="./img/catalogo/7.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$45.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="los nombres propios" autor="Marta Jimenez Serrano" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/8.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$67.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="cuentos de hadas" autor="Stephen King" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/9.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$65.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="el caso de alaska sanders" autor="Joel Dicker" categoria="thriller">
+                <div class="card_img">
+                    <img src="./img/catalogo/10.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$49.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="ultimos dias en berlin" autor="Paloma Sanchez-Garnica" categoria="novela historica">
+                <div class="card_img">
+                    <img src="./img/catalogo/11.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$46.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="demaciado odio" autor="Sara Sefchovich" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/12.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$78.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Sacrificios Humanos" autor="Maria Fernanda Ampuero" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/13.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$53.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="El lunes nos querrán" autor="Najat El Hachmi" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/14.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$35.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="La mitad evanescente" autor="Brit Bennett" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/15.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$56.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Dónde estás, mundo bello" autor="Sally Rooney" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/16.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$40.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="De ninguna parte" autor="Julia Navarro" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/17.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$51.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Por si las voces vuelven" autor="Angel Martin" categoria="no ficción">
+                <div class="card_img">
+                    <img src="./img/catalogo/18.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$52.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Violeta" autor="Isabel Allende" categoria="novela historica">
+                <div class="card_img">
+                    <img src="./img/catalogo/19.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$44.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="El vigilante nocturno" autor="Louise Erdrich" categoria="novela historica">
+                <div class="card_img">
+                    <img src="./img/catalogo/20.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$77.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Mujeres valientes" autor="Txell Feixas Torras" categoria="ensayo">
+                <div class="card_img">
+                    <img src="./img/catalogo/21.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$63.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="El libro negro de las horas" autor="Eva García Sáenz de Urturi" categoria="thriller">
+                <div class="card_img">
+                    <img src="./img/catalogo/22.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$36.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Hijas de Esparta" autor="Claire Heywood" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/23.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$53.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Las brujas del ayer y del mañana" autor="Alix E. Harrow" categoria="novela fantastica">
+                <div class="card_img">
+                    <img src="./img/catalogo/24.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$69.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="El tercer país" autor="Karina Sainz Borgo" categoria="novela">
+                <div class="card_img">
+                    <img src="./IMG/catalogo/25.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$32.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Los abismos" autor="Pilar Quintana" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/26.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$52.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Cuando mi cuerpo dejó de ser tu casa" autor="Emma Sepúlveda" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/27.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$33.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="La escuela de la vida" autor="Laura Baldini" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/28.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$36.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="El campamento" autor="Blue Jeans" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/29.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$00.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Sira" autor="Maria Dueñas" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/30.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$55.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="El hilo de oro" autor="David Hernández de la Fuente" categoria="ensayo">
+                <div class="card_img">
+                    <img src="./img/catalogo/31.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$37.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Klara y el sol" autor="Kazuo Ishiguro" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/32.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$50.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="A orillas del mar" autor="Abdulrazak Gurnah" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/33.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$45.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Una historia ridícula" autor="Luis Landero" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/34.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$55.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Cuentos para entender el mundo" autor="Eloy Moreno" categoria="cuento">
+                <div class="card_img">
+                    <img src="./img/catalogo/35.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$39.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="La librera de París" autor="Kerri Maher" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/36.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$51.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="A fuego lento" autor="Paula Hawkins" categoria="novela negra">
+                <div class="card_img">
+                    <img src="./img/catalogo/37.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$64.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Una sala llena de corazones rotos" autor="Anne Tyler" categoria="novela negra">
+                <div class="card_img">
+                    <img src="./img/catalogo/38.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$65.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="La biblioteca de fuego" autor="Maria Zaragoza" categoria="novela">
+                <div class="card_img">
+                    <img src="./img/catalogo/39.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$87.000</span>
+                </div>
+            </div>
+
+            <div class="card" nombre-libro="Dioses y mendigos" autor="José María Bermúdez de Castro" categoria="ensayo">
+                <div class="card_img">
+                    <img src="./img/catalogo/40.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$42.000</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="pagination">
+            <button id="prev">Anterior</button>
+            <button id="next">Siguiente</button>
+        </div> 
+
+        <a href="catalogo.html" style="
+        text-decoration: none;
+        color: #242424;
+        margin-bottom: 10px;">Ir al Catalogo</a>
+
+    </div>
+
+
+
+
+    <div class="promociones">
+
+        <h2>Promociones</h2>
+
+        <div class="container_promo">
+
+            <div class="card_promo">
+                <div class="img_promo">
+                    <img src="./IMG/iconos/bienvenido-de-nuevo.png" alt="">
+                </div>
+                <div class="info_promo">
+                    <h3>¡Bienvenido a nuestra librería!</h3>
+                    <p>
+                        Como agradecimiento especial, te ofrecemos un descuento del 10% en tu primera compra. 
+                        Es la oportunidad perfecta para explorar nuestra amplia selección de libros y comenzar 
+                        tu viaje literario.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card_promo">
+                <div class="img_promo">
+                    <img src="./IMG/iconos/la-lealtad-del-cliente.png" alt="">
+                </div>
+                <div class="info_promo">
+                    <h3>¡Valoramos a nuestros clientes leales!</h3>
+                    <p>
+                        Registrate a nuestro programa de fidelidad y obtén beneficios exclusivos. 
+                        Acumula puntos por cada compra y canjéalos por descuentos, regalos o incluso
+                        eventos especiales.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card_promo">
+                <div class="img_promo">
+                    <img src="./IMG/iconos/camion-de-reparto-gratuito.png" alt="">
+                </div>
+                <div class="info_promo">
+                    <h3>¡Envios Gratis!</h3>
+                    <p>
+                        Realiza compras mayores de $100.000 en nuestra librería en línea y disfruta del envío gratuito a tu domicilio.
+                    </p>
+                    <p class="solo">
+                        *Promocion valida solo para nuestros clientes en Cali, Colombia*
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="eventos">
+        <h2>Eventos Mensuales</h2>
+
+        <div class="container_eventos">
+
+            <div class="card_eventos">
+                <div class="info_evento">
+                    <h3>Versos en Vuelo</h3>
+                    <p>
+                        Te invitamos a unirte a nosotros en una noche llena de inspiración, emociones y versos que 
+                        volarán por el aire. "Versos en Vuelo" es un evento de poesía donde celebraremos la diversidad 
+                        y el poder de las palabras en su forma más lírica.
+                    </p>
+                    <b>El primer viernes de cada mes</b>
+                    <b>7:00 p.m - 8:00 p.m</b>
+                </div>
+                <div class="evento_btn">
+                    <a href="https://wa.me/573187302078?text=Buanas, me gustaria asistir a la noche de *Versos en Vuelo*." target="_blank"><i class="fa-brands fa-whatsapp"></i> Confirmar Asistencia</a>
+                </div>
+            </div>
+
+            <div class="card_eventos">
+                <div class="info_evento">
+                    <h3>Noches de lectura terroríficas</h3>
+                    <p>
+                        Únete a nosotros y sumérgete en la atmósfera escalofriante mientras compartimos fragmentos de 
+                        libros de terror, debatimos sobre nuestras historias favoritas y compartimos nuestros miedos 
+                        más profundos.
+                    </p>
+                    <b>Ultimos viernes de cada mes</b>
+                    <b>7:30 p.m - 9:00 p.m</b>
+                </div>
+                <div class="evento_btn">
+                    <a href="https://wa.me/573187302078?text=Buanas, me gustaria asistir a la *Noche de lectura terrorífica* de este mes." target="_blank"><i class="fa-brands fa-whatsapp"></i> Confirmar Asistencia</a>
+                </div>
+            </div>
+            
+            <div class="card_eventos">
+                <div class="info_evento">
+                    <h3>Cuenta Cuentos</h3>
+                    <p>
+                        ¿Estás buscando una actividad emocionante y educativa para tus hijos? 
+                        Te invitamos a nuestro Cuentacuentos mágico, un evento lleno de imaginación 
+                        y entretenimiento para niños de todas las edades.
+                    </p>
+                    <b>El primer domingo de cada mes</b>
+                    <b>10:00 a.m - 11:00 a.m</b>
+                </div>
+                <div class="evento_btn">
+                    <a href="https://wa.me/573187302078?text=Buanas, me gustaria asistir al *Cuenta Cuentos*." target="_blank"><i class="fa-brands fa-whatsapp"></i> Confirmar Asistencia</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="libreria_contacto">
+        <div class="container_contacto">
+
+            <div class="atencion_cliente">
+
+                <h5>Atención al cliente</h5>
+
+                <h2>Horario</h2>
+    
+                <p>
+                    <b>Lunes a Viernes:</b>
+                    <span>8:30 am - 05:00 pm</span></h2><br>
+                    <b>Sabados:</b>
+                    <span>8:30 am - 02:00 pm</span></h2>
+                </p>
+                
+            </div>
+    
+            <div class="libreria">
+    
+                <h5>Ubicación</h5>
+
+                <h2>Dirección:</h2>
+                <p style="margin-bottom: 20px;">
+                    Calle xx # xx-xx 
+                    Barrio xxxxxxxxxx, Cali, Colombia
+                </p>
+        
+            </div>
+
+            <div class="contacto">
+                <h5>Contacto</h5>
+
+                <h2>Telefonos:</h2>
+                <p>602 xxx - xxxx / 602 xxx - xxxx</p>
+                <p>602 xxx - xxxx / 602 xxx - xxxx</p>
+    
+                <div class="iconos">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15930.587228803013!2d-76.55373178628537!3d3.435829015147695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a68310300075%3A0xd88e534efc39f505!2sParque%20Del%20Perro!5e0!3m2!1ses!2sco!4v1672782423385!5m2!1ses!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+   
+    <footer>
+        <p>©2023 Por Laura Camila Urbano Suarez</p>
+    </footer>
+   
+
+
+
+    <script src="./JS/header.js"></script>
+    <script src="./JS/paginacion.js"></script>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4380b6d3aa.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Completar Compra</title>
+    <link rel="stylesheet" href="./CSS/generales.css">
+    <link rel="stylesheet" href="./CSS/compra.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>Laberinto Literario</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-bars" id="icon_menu"></i>
+
+    </header>
+
+
+    <section>
+        <h2>Completar Compra</h2>
+
+        <form action="">
+            <input type="text" name="nombre" placeholder="Nombre Completo" required>
+            <input type="text" name="correo" placeholder="Correo Electronico" required>
+            <input type="text" name="telefono" placeholder="Telefono" required>
+            <input type="text" name="direccion" placeholder="Direccion" required>
+        </form>
+
+        <!--<table id="lista-compra">
+            <thead>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th></th>
+            </thead>
+            <tbody></tbody>
+        </table>-->
+
+        <ul id="lista-carrito"></ul>
+
+
+    </section>
+
+
+    <footer>
+        <p>©2023 Por Laura Camila Urbano Suarez</p>
+    </footer>
+
+
+    <script src="./JS/header.js"></script>
+    <script src="./JS/carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+/************************************************ MAIN ***********************************************/
+main
+{
+    width: 100%;
+    margin-top: 150px;
+}
+
+main .inicio_img
+{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(120deg, hsla(120, 1%, 14%, 0.521) 0%, hsla(0, 0%, 31%, 0.521) 100%), url("../img/img_inicio.jpg");
+}
+
+main .contenido
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contenido h1
+{
+    font-size: 80px;
+    font-family: 'Bigelow Rules', cursive;
+}
+
+.contenido p
+{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/************************************************ SERVICIOS ***********************************************/
+
+.servicios
+{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+}
+
+.servicios h2
+{
+    color: #252525;
+    margin-bottom: 10px;
+}
+
+.servicios .container_servicios
+{
+    width: 90%;
+    gap: 1rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat( auto-fit, minmax(220px, 1fr));
+}
+
+.container_servicios .card_servicio
+{
+    width: 220px;
+    height: 110px;
+    display: grid;
+    place-items: center;
+    border: double #242424 ;
+}
+
+.card_servicio .servicio_img
+{
+    width: 80;
+    height: 80px;
+}
+
+.servicio_img img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.card_servicio .card_titulo
+{
+    width: 100%;
+    text-align: center;
+}
+/************************************************ CATALOGO ***********************************************/
+.catalogo
+{
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+    background-color: #dddbdb;
+}
+
+.catalogo h2
+{
+    margin: 30px;
+    color: #242424;
+}
+
+/**************** LIBROS ****************/
+
+.catalogo .container_libros
+{
+    width: 80%;
+    height: 100%;
+    margin-top: 20px;
+    gap: 1rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.container_libros .card
+{
+    width: 200px;
+    height: 320px;
+    
+    background-color: #dddcdc;
+    box-shadow: 0px 0px 30px -20px black;
+}
+
+.card .card_img
+{
+    width: 200px;
+    height: 290px;
+}
+
+.card_img img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.card .precio
+{
+    margin: 6px;
+    text-align: center;
+}
+
+.precio span
+{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card button
+{
+    width: 150px;
+    padding: 5px;
+    cursor: pointer;
+    color: #242424;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: .3s ease-out;
+    border: #242424 2px solid;
+    background-color: transparent;
+}
+
+.card button:hover
+{
+    color: #fff;
+    background-color: #242424;
+}
+
+/**************** PAGINACION ****************/
+
+#pagination
+{
+    text-align: center;
+    margin: 25px 0px;
+    user-select: none;
+}
+
+#pagination button
+{
+    font-size: 14px;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#prev:hover
+{
+    transform: translateX(-5px);
+}
+
+#next:hover
+{
+    transform: translateX(5px);
+}
+
+/************************************************ PROMOCIONES ***********************************************/
+.promociones
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 100px;
+    
+}
+
+.promociones h2
+{
+    margin-bottom: 40px;
+}
+
+.promociones .container_promo
+{
+    width: 90%;
+    height: 100%;
+    gap: 1rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.container_promo .card_promo
+{
+    width: 350px;
+    height: 250px;
+    display: grid;
+    place-items: center;
+    background-color: #ececec;
+    box-shadow: 0px 0px 30px -18px black;
+}
+
+.card_promo .img_promo
+{
+    width: 120px;
+    height: 120px;
+}
+
+.img_promo img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.card_promo .info_promo
+{
+    padding: 5px;
+    display: grid;
+    place-items: center;
+}
+
+.info_promo p
+{
+    width: 95%;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.info_promo .solo
+{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/************************************************ EVENTOS ***********************************************/
+.eventos
+{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+    background-color: #dddbdb;
+}
+
+.eventos h2
+{
+    margin-bottom: 50px;
+}
+
+.eventos .container_eventos
+{
+    width: 90%;
+    height: 100%;
+    gap: 1rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.container_eventos .card_eventos
+{
+    width: 350px;
+    height: 260px;
+    padding: 10px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    background-color: #fff;
+}
+
+.card_eventos .info_evento
+{
+    display: grid;
+    place-items: center;
+}
+
+.info_evento h3
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info_evento p
+{
+    width: 95%;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.evento_btn a
+{
+    font-size: 16px;
+    padding: 5px;
+    text-decoration: none;
+    color: #494949;
+    border: double #494949;
+    border-radius: 20px;
+    transition: all 0.3s ease-in;
+}
+
+.evento_btn a:hover
+{
+    color: #fff;
+    background-color: #494949;
+}
+
+/************************************************ LIBRERIA ***********************************************/
+.libreria_contacto
+{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+}
+
+.libreria_contacto .container_contacto
+{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container_contacto .atencion_cliente
+{
+    padding: 10px;
+    text-align: center;
+    border-right: 2px solid #242424;
+    border-left: 2px solid #242424;
+}
+
+.container_contacto .libreria,
+.container_contacto .contacto
+{
+    padding: 10px;
+    text-align: center;
+    border-right: 2px solid #242424;
+}
+
+.contacto .iconos
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contacto .iconos i
+{
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease ;
+}
+
+.contacto .iconos i:hover
+{
+    color: #706f6f;
+}
+
+.mapa
+{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+/****************************************************************************************************************/
+
+@media (max-width: 393px)
+{
+    .contenido h1
+    {
+        font-size: 50px;
+    }
+
+    .contenido p
+    {
+        font-size: 16px;
+    }
+
+    .container_promo
+    {
+        width: 100%;
+    }
+    .container_promo .card_promo
+    {
+        width: 300px;
+        height: 300px;
+    }
+
+    .eventos
+    {
+        padding: 0;
+    }
+
+    .container_eventos
+    {
+        width: 100%;
+    }
+
+    .container_eventos .card_eventos
+    {
+        width: 260px;
+        height: 330px;
+    }
+
+    .container_contacto
+    {
+        width: 100%;
+        display: grid;
+    }
+}
+
+@media (max-width: 414px)
+{
+    .eventos
+    {
+        padding: 4px;
+    }
+}

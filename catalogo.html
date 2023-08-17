@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4380b6d3aa.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Catalogo - Laberinto Literario</title>
+    <link rel="stylesheet" href="./CSS/generales.css">
+    <link rel="stylesheet" href="./CSS/catalogo.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>Laberinto Literario</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html" class="select">Catálogo</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="iconos">
+            <div class="car">
+                <i class="fa-solid fa-cart-shopping" title="Carrito" id="carrito_"></i>
+                <span class="contador_producto">0</span>
+            </div>
+            <i class="fa-solid fa-xmark" title="Cerrar" id="cerrar_carrito"></i>
+            <i class="fa-solid fa-bars" id="icon_menu"></i>
+        </div>
+
+    </header>
+
+
+    <div id="carrito">
+        <h2>Carrito de compras</h2>
+
+        <table id="lista-productos">
+            <thead>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th></th>
+            </thead>
+            <tbody></tbody>
+            <div id="mensaje_vacio" style="display: none;">El carrito está vacío</div>
+        </table>
+        <span id="total">Precio Total: $0.000</span>
+        
+        <div class="botones">
+            <a href="#" id="comprar">Completar Compra</a>
+            <a href="#" id="vaciar">Vaciar Carrito</a>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="info_compra">
+        <div class="datos">
+            <i class="fa-solid fa-square-xmark" title="Cerrar" id="cerrar_compra"></i>
+            <h2>Completar Compra</h2>
+            <form action="" method="post" id="formulario">
+                <h3>Datos Personales</h3>
+                <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                <input type="text" name="correo" placeholder="Correo Electronico" required>
+                <input type="text" name="telefono" placeholder="Telefono" required>
+                <input type="text" name="ciudad" placeholder="Ciudad" required id="ciudad-input">
+                <input type="text" name="barrio" placeholder="Barrio" required>
+                <input type="text" name="direccion" placeholder="Direccion" required>
+                <button type="submit" id="verificar_btn">Verificar</button>
+            </form>
+
+            <div class="totales" style="text-align: left;">
+                <span id="total-compra">Precio Total: $0.000</span><br>
+                <span id="tarifa" style="display: none;">Valor domicilio: $12.000</span><br>
+                <span id="total-pedido" style="font-weight: 800; display: none;">Valor Total a Pagar: $00.000</span>
+            </div>
+
+            <div class="buttons">
+                <button id="cancelar_pedido">Cancelar Pedido</button>
+                <button id="pagar" style="display: none;">Realizar Compra</button>
+            </div>
+            
+
+        </div>
+    </div>
+      
+
+
+
+
+
+    <div class="catalogo">
+
+        <div class="buscar">
+            <input type="text" id="buscador" placeholder="Buscar libro/autor...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="categorias">
+
+            <div class="cate todos activo" id="categoria-todos"><span>Todos</span></div>
+            <div class="cate cuento" id="categoria-cuento"><span>Cuento</span></div>
+            <div class="cate ensayo" id="categoria-ensayo"><span>Ensayo</span></div>
+            <div class="cate novela" id="categoria-novela"><span>Novela</span></div>
+            <div class="cate thriller" id="categoria-thriller"><span>Thriller</span></div>
+
+        </div>
+
+        <div class="container_libros">
+
+            <div class="card" nombre-libro="el ancho mundo" autor="Pierre Lemaitre" categoria="novela" id-producto="1">
+                <div class="card_img">
+                    <img src="./img/catalogo/1.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$56.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="el cuco de cristal" autor="Javier Castillo" categoria="novela negra" id-producto="2">
+                <div class="card_img">
+                    <img src="./img/catalogo/2.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$97.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="las formas del querer" autor="Ines Rodrigo" categoria="novela" id-producto="3">
+                <div class="card_img">
+                    <img src="./img/catalogo/3.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$45.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="lejos de luisiana" autor="Luz Gabss" categoria="novela historica" id-producto="4">
+                <div class="card_img">
+                    <img src="./img/catalogo/4.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$58.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="cuando no quedan mas estrellas que contar" autor="Maria Martinez" categoria="novela" id-producto="5">
+                <div class="card_img">
+                    <img src="./img/catalogo/5.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$36.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="esta herida llena de peces" autor="Lorena Salazar Masso" categoria="novela" id-producto="6">
+                <div class="card_img">
+                    <img src="./img/catalogo/6.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$73.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="bajo un cielo blanco" autor="Elizabeth Kolbert" categoria="ensayo" id-producto="7">
+                <div class="card_img">
+                    <img src="./img/catalogo/7.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$45.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="los nombres propios" autor="Marta Jimenez Serrano" categoria="novela" id-producto="8">
+                <div class="card_img">
+                    <img src="./img/catalogo/8.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$67.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="cuentos de hadas" autor="Stephen King" categoria="novela" id-producto="9">
+                <div class="card_img">
+                    <img src="./img/catalogo/9.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$65.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="el caso de alaska sanders" autor="Joel Dicker" categoria="thriller" id-producto="10">
+                <div class="card_img">
+                    <img src="./img/catalogo/10.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$49.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="ultimos dias en berlin" autor="Paloma Sanchez-Garnica" categoria="novela historica" id-producto="11">
+                <div class="card_img">
+                    <img src="./img/catalogo/11.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$46.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="demaciado odio" autor="Sara Sefchovich" categoria="novela" id-producto="12">
+                <div class="card_img">
+                    <img src="./img/catalogo/12.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$78.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Sacrificios Humanos" autor="Maria Fernanda Ampuero" categoria="novela" id-producto="13">
+                <div class="card_img">
+                    <img src="./img/catalogo/13.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$53.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="El lunes nos querrán" autor="Najat El Hachmi" categoria="novela" id-producto="14">
+                <div class="card_img">
+                    <img src="./img/catalogo/14.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$35.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="La mitad evanescente" autor="Brit Bennett" categoria="novela" id-producto="15">
+                <div class="card_img">
+                    <img src="./img/catalogo/15.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$56.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Dónde estás, mundo bello" autor="Sally Rooney" categoria="novela" id-producto="16">
+                <div class="card_img">
+                    <img src="./img/catalogo/16.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$40.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="De ninguna parte" autor="Julia Navarro" categoria="novela" id-producto="17">
+                <div class="card_img">
+                    <img src="./img/catalogo/17.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$51.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Por si las voces vuelven" autor="Angel Martin" categoria="novela" id-producto="18">
+                <div class="card_img">
+                    <img src="./img/catalogo/18.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$52.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Violeta" autor="Isabel Allende" categoria="novela historica" id-producto="19">
+                <div class="card_img">
+                    <img src="./img/catalogo/19.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$44.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="El vigilante nocturno" autor="Louise Erdrich" categoria="novela historica" id-producto="20">
+                <div class="card_img">
+                    <img src="./img/catalogo/20.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$77.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Mujeres valientes" autor="Txell Feixas Torras" categoria="ensayo" id-producto="21">
+                <div class="card_img">
+                    <img src="./img/catalogo/21.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$63.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="El libro negro de las horas" autor="Eva García Sáenz de Urturi" categoria="thriller" id-producto="22">
+                <div class="card_img">
+                    <img src="./img/catalogo/22.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$36.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Hijas de Esparta" autor="Claire Heywood" categoria="novela" id-producto="23">
+                <div class="card_img">
+                    <img src="./img/catalogo/23.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$53.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Las brujas del ayer y del mañana" autor="Alix E. Harrow" categoria="novela fantastica" id-producto="24">
+                <div class="card_img">
+                    <img src="./img/catalogo/24.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$69.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="El tercer país" autor="Karina Sainz Borgo" categoria="novela" id-producto="25">
+                <div class="card_img">
+                    <img src="./IMG/catalogo/25.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$32.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Los abismos" autor="Pilar Quintana" categoria="novela" id-producto="26">
+                <div class="card_img">
+                    <img src="./img/catalogo/26.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$52.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Cuando mi cuerpo dejó de ser tu casa" autor="Emma Sepúlveda" categoria="novela" id-producto="27">
+                <div class="card_img">
+                    <img src="./img/catalogo/27.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$33.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="La escuela de la vida" autor="Laura Baldini" categoria="novela" id-producto="28">
+                <div class="card_img">
+                    <img src="./img/catalogo/28.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$36.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="El campamento" autor="Blue Jeans" categoria="novela" id-producto="29">
+                <div class="card_img">
+                    <img src="./img/catalogo/29.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$30.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Sira" autor="Maria Dueñas" categoria="novela" id-producto="30">
+                <div class="card_img">
+                    <img src="./img/catalogo/30.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$55.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="El hilo de oro" autor="David Hernández de la Fuente" categoria="ensayo" id-producto="31">
+                <div class="card_img">
+                    <img src="./img/catalogo/31.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$37.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Klara y el sol" autor="Kazuo Ishiguro" categoria="novela" id-producto="32">
+                <div class="card_img">
+                    <img src="./img/catalogo/32.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$50.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="A orillas del mar" autor="Abdulrazak Gurnah" categoria="novela" id-producto="33">
+                <div class="card_img">
+                    <img src="./img/catalogo/33.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$45.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Una historia ridícula" autor="Luis Landero" categoria="novela" id-producto="34">
+                <div class="card_img">
+                    <img src="./img/catalogo/34.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$55.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Cuentos para entender el mundo" autor="Eloy Moreno" categoria="cuento" id-producto="35">
+                <div class="card_img">
+                    <img src="./img/catalogo/35.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$39.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="La librera de París" autor="Kerri Maher" categoria="novela" id-producto="36">
+                <div class="card_img">
+                    <img src="./img/catalogo/36.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$51.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="A fuego lento" autor="Paula Hawkins" categoria="novela negra" id-producto="37">
+                <div class="card_img">
+                    <img src="./img/catalogo/37.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$64.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Una sala llena de corazones rotos" autor="Anne Tyler" categoria="novela negra" id-producto="38">
+                <div class="card_img">
+                    <img src="./img/catalogo/38.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$65.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="La biblioteca de fuego" autor="Maria Zaragoza" categoria="novela" id-producto="39">
+                <div class="card_img">
+                    <img src="./img/catalogo/39.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$87.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Dioses y mendigos" autor="José María Bermúdez de Castro" categoria="ensayo" id-producto="40">
+                <div class="card_img">
+                    <img src="./img/catalogo/40.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$42.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="Cuentos macabros" autor="Edgar Allan Poe" categoria="cuento" id-producto="41">
+                <div class="card_img">
+                    <img src="./IMG/catalogo/41.jpg" alt="">
+                </div>
+                <div class="precio">
+                    <span>$87.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+            <div class="card" nombre-libro="El Principe de la Niebla" autor="Carlos Ruiz Zafon" categoria="novela" id-producto="42">
+                <div class="card_img">
+                    <img src="./img/catalogo/42.webp" alt="">
+                </div>
+                <div class="precio">
+                    <span>$42.000</span>
+                </div>
+                <button id="carrito_btn"><i class="fa-solid fa-cart-shopping cart"></i> Agregar al Carrrito</button>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>©2023 Por Laura Camila Urbano Suarez</p>
+    </footer>
+
+
+    <script src="./JS/header.js"></script>
+    <script src="./JS/catalogo.js"></script>
+    <script src="./JS/completarCompra.js"></script>
+    <script src="./JS/carrito.js"></script>
+
+</body>
+</html>

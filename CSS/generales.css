@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Inter+Tight:wght@200;400&family=Montserrat:wght@300;600&family=Poppins:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Griffy&family=Nosifer&family=Sevillana&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    box-sizing: border-box;
+}
+
+/************************************************ HEADER ***********************************************/
+header
+{
+    width: 100%;
+    height: 80px;
+    padding: 30px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+header.active
+{
+    box-shadow: 0px 0px 30px -20px black;
+}
+
+header .logo h1
+{
+    font-size: 25px;
+    color: #242424;
+    font-family: 'Roboto', cursive;
+}
+
+header nav ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li
+{
+    padding: 15px 20px;
+    list-style: none;
+}
+
+nav ul li a
+{
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    color: #242424;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+nav ul li a::before
+{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #242424;
+    bottom: 0;
+    right: 0;
+    transition: all .5s;
+}
+
+nav ul li a::after
+{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #242424;
+    top: 0%;
+    left: 0%;
+    transition: all .5s;
+}
+
+a.select::after,
+a.select::before
+{
+    width: 100%;
+}
+
+nav ul li a:hover::after,
+nav ul li a:hover::before
+{
+    width: 100%;
+}
+
+header .iconos
+{
+    width: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#carrito_
+{
+    color: #242424;
+    font-size: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.fa-xmark
+{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 20px 20px;
+    transition: all 0.3s;
+}
+
+.fa-xmark:hover
+{
+    transform: rotate(90deg);
+}
+
+.fa-bars
+{
+    color: #242424;
+    font-size: 20px;
+    padding: 20px 20px;
+    display: none;
+}
+
+/************************************************ FOOTER ***********************************************/
+footer
+{
+    width: 100%;
+    height: 100px;
+    border-radius: 20px 20px 0px 0px;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    background-color: #3d3c3c;
+}
+
+footer p
+{
+    font-size: 12px;
+}
+
+/*********************************************************************************/
+@media (max-width: 1024px)
+{
+    header
+    {
+        padding: 5px;
+    }
+    
+    header .iconos
+    {
+        width: 150px;
+    }
+
+    header .fa-bars
+    {
+        display: flex;
+        cursor: pointer;
+    }
+
+    nav
+    {
+        height: 0;
+        width: 200px;
+        position: absolute;
+        justify-items: left;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgb(0, 0, 0) ;
+        transition: all 300ms;
+    }
+
+    nav ul
+    {
+        flex-direction: column;
+        background: #242424;
+        gap: 5px;
+    }
+
+    nav ul li
+    {
+        padding: 10px 5px;
+    }
+
+    nav ul li a::before,
+    nav ul li a::after
+    {
+        background-color: #fff;
+    }
+
+    nav ul li a
+    {
+        color:#fff;
+    }
+
+
+    .mostrar_menu_navegacion /*CLASE MANIPILADA POR JS*/
+    {
+        height: 235px;
+    }
+}
+
+@media (max-width: 395px)
+{
+    .logo h1
+    {
+        color: aqua;
+        font-size: 18px;
+    }
+}

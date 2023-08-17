@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4380b6d3aa.js" crossorigin="anonymous"></script>
+    <title>Contacto - Laberinto Literario</title>
+    <link rel="stylesheet" href="./CSS/generales.css">
+    <link rel="stylesheet" href="./CSS/contacto.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>Laberinto Literario</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="select">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <i class="fa-solid fa-bars" id="icon_menu"></i>
+    </header>
+
+    <section>
+        <div class="datos">
+            <div class="texto">
+                <img src="./IMG/iconos/atencion-al-cliente.png" alt="">
+                <p>Contacta con nosotros atravez de nuestras lineas telefonicas</p><br>
+                <p>602 xxx - xxxx / 602 xxx - xxxx</p>
+                <p>602 xxx - xxxx / 602 xxx - xxxx</p><br>
+                <p>O atravez de nuestro WhatsApp</p>
+                <a href="https://wa.me/573187302078?text=Buen Dia" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="formulario">
+            <h2>Envianos un mensaje</h2>
+            <form id="formu" action="" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre completo" class="inp" required>
+                <input type="text" name="tel" placeholder="Numero telefonico" class="inp"  required>
+                <input type="text" name="correo" placeholder="Correo electronico" class="inp"  required>
+                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje" class="inp"  required></textarea>
+                <div class="permiso">
+                    <input type="checkbox" id="acepto">
+                    <p>  Acepto el tratamiento de mis datos para el procesamiento de este formulario.</p>
+                </div>
+                <input type="submit" value="Enviar" id="enviar">
+            </form>
+        </div>
+    </section>
+
+
+
+    
+    <footer>
+        <p>©2023 Por Laura Camila Urbano Suarez</p>
+    </footer>
+
+
+    <script src="./JS/header.js"></script>
+    <script>
+        document.getElementById('formu').addEventListener('submit', function(event) 
+        {
+            var checkbox = document.getElementById('acepto');
+            if (!checkbox.checked) 
+            {
+                event.preventDefault();
+                alert("Debes aceptar el tratamiento de tus datos para enviar el formulario.");
+            } else {
+                alert("Tu mensaje ha sido enviado");
+            }
+});
+
+    </script>
+</body>
+</html>
